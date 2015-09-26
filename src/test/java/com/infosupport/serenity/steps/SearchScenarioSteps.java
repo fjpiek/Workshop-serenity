@@ -1,6 +1,7 @@
 package com.infosupport.serenity.steps;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 
@@ -19,4 +20,13 @@ public class SearchScenarioSteps {
         customer.customer_searches_by_keyword(keyword);
     }
 
+    @Then("^I should see only products related to '(.*)'")
+    public void resultsForSearchingByKeywords(String keyword) {
+        customer.customer_should_see_results_summary_containing(keyword);
+    }
+
+    @Then("^I should see a catagory option '(.*)'$")
+    public void I_should_a_catagory_option(String catagory)  {
+        customer.customer_should_see_catagory_option(catagory);
+    }
 }

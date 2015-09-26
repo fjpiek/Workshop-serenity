@@ -11,7 +11,6 @@ public class PetsPlaceHomePage extends PageObject {
     @FindBy(id = "searchbarcomponenttextinput")
     WebElementFacade searchBar;
 
-
     public void enterSearchTerms (String keyword){
         searchBar.typeAndEnter(keyword);
     }
