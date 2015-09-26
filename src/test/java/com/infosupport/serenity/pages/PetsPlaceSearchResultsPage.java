@@ -14,6 +14,9 @@ public class PetsPlaceSearchResultsPage extends PageObject{
     @FindBy(css = ".nav.search-nav.all")
     WebElementFacade catagorySelections;
 
+    @FindBy(css = "div.searchproduct:nth-child(1)")
+    WebElementFacade item1;
+
     public Optional<String> getSearchpageResultNote() {
         if (resultNote.isPresent() && resultNote.isVisible()) {
             return Optional.of(resultNote.getText());
@@ -28,6 +31,10 @@ public class PetsPlaceSearchResultsPage extends PageObject{
         } else {
             return Optional.absent();
         }
+    }
+
+    public void selectItem1(){
+        item1.click();
     }
 
 }
