@@ -1,3 +1,5 @@
+@version:Release-1
+@version:Sprint-1.2
 Feature: Product details
   In order for buyers to to make the right decision
   As a seller
